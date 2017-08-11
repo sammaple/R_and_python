@@ -1,0 +1,13 @@
+
+def isDirectorIn(str, list):
+    tmp2 = str.replace(" ", "")
+    t_list = tmp2.split(" ")
+    for i in t_list:
+        if i in list:
+            return True
+
+    return False
+
+r = isDirectorIn("jj",["jhy","jj"])
+print(r)
+print(r == False)

@@ -5,9 +5,14 @@ library("ggplot2")
 library("gridExtra")
 
 douban <- read.csv("D:\\new\\R\\douban\\result_new_rm_countries.csv", header=TRUE)  
-str(douban)
+douban_direct <- read.csv("D:\\new\\R\\douban\\director_count.csv", header=TRUE)  
+
+#str(douban)
 
 douban_info <- tbl_df(douban) ##转化为dplyr处理的更优雅的数据结构
+douban_direct_info <- tbl_df(douban_direct) ##转化为dplyr处理的更优雅的数据结构
+douban_direct_info <- reorder(douban_direct_info,Count)
+douban_direct_info <- head(douban_direct_info,40)
 
 douban_choosen <- select(douban_info,"result__date","result__rate","result__time","result__country","result__time_rate")
 
@@ -33,6 +38,9 @@ p5 <- ggplot(douban_choosen, aes(x=douban_choosen$result__date,y=result__rate,co
 #      xlab("总户数") + ylab("楼盘名") + ggtitle("随机10个楼盘信息") + #添加横纵坐标名称，添加图的名称
 #	xlim(1900,2500) #修改X轴范围
 
+p6 <- ggplot(douban_direct_info,aes(x=Director,fill=as.numeric(Count))) + geom_bar() + ggtitle("豆瓣电影导演产出") +
+theme(axis.text.x=element_text(face="bold",size=8,angle=90,color="red"))
+
 #p4 <- ggplot(douban_choosen) + geom_bar(aes(x=result__date,fill=result__country), position = 'dodge') + ggtitle("638升级分柱统计图") +
 #theme(axis.text.x=element_text(face="bold",size=8,angle=90,color="red"))
 
@@ -42,4 +50,4 @@ p5 <- ggplot(douban_choosen, aes(x=douban_choosen$result__date,y=result__rate,co
 
 #p6 <- ggplot(osupdate_choosen) + geom_density(aes(x=date,color=net))
 #grid.arrange(p1, p2, p3,p4,p5,p6, ncol=2)
-grid.arrange(p5,ncol=2)
+grid.arrange(p6,ncol=2)
