@@ -1,0 +1,58 @@
+<eventSampleConf><version>23</version><nextUpdateInterval>259200</nextUpdateInterval><samplePeriod>259200</samplePeriod><events><event><id>1</id><name>App类</name><expireTime>2568553840</expireTime><rate>0.01</rate><logId>13468</logId><pages type="app"></pages></event><event><id>2</id><name>页面类</name><expireTime>2568553840</expireTime><rate>0.01</rate><logId>13441</logId><pages type="page"></pages></event><event><id>3</id><name>App统计类</name><expireTime>2568553840</expireTime><rate>1</rate><logId>13468</logId><pages type="appstat"></pages></event><event><id>4</id><name>页面统计类</name><expireTime>2568553840</expireTime><rate>1</rate><logId>13468</logId><pages type="pagestat"></pages><specialPVPages><!--主界面-->
+<pageItem prePage="FindMoreFriendUI" page="MainUI"></pageItem>
+<pageItem prePage="AddressUI" page="MainUI"></pageItem>
+<pageItem prePage="MoreTabUI" page="MainUI"></pageItem>
+<!--单聊界面-->
+<pageItem prePage="MainUI" page="ChattingUI"></pageItem>
+<!--群聊界面-->
+<pageItem prePage="MainUI" page="ChattingUI_chatroom"></pageItem>
+<!--朋友圈-->
+<pageItem prePage="FindMoreFriendUI" page="SnsTimeLineUI"></pageItem>
+<!--发现-->
+<pageItem prePage="MainUI" page="FindMoreFriendUI"></pageItem>
+<pageItem prePage="AddressUI" page="FindMoreFriendUI"></pageItem>
+<pageItem prePage="MoreTabUI" page="FindMoreFriendUI"></pageItem>
+<!--朋友圈图片浏览-->
+<pageItem prePage="SnsTimeLineUI" page="SnsBrowseUI"></pageItem>
+<!--会话图片小视频浏览-->
+<pageItem prePage="ChattingUI" page="ImageGalleryUI"></pageItem>
+<pageItem prePage="ChattingUI_chatroom" page="ImageGalleryUI"></pageItem>
+<!--用户profile页-->
+<pageItem prePage="ChattingUI" page="ContactInfoUI"></pageItem>
+<pageItem prePage="AddressUI" page="ContactInfoUI"></pageItem>
+<pageItem prePage="ChattingUI_chatroom" page="ContactInfoUI"></pageItem>
+<!--公众号会话界面-->
+<pageItem prePage="MainUI" page="ChattingUI_bizContact"></pageItem>
+<pageItem prePage="BrandServiceIndexUI" page="ChattingUI_bizContact"></pageItem>
+<pageItem prePage="ContactInfoUI" page="ChattingUI_bizContact"></pageItem>
+<!--通讯录列表-->
+<pageItem prePage="MainUI" page="AddressUI"></pageItem>
+<pageItem prePage="ContactInfoUI" page="AddressUI"></pageItem>
+<pageItem prePage="FindMoreFriendUI" page="AddressUI"></pageItem>
+<pageItem prePage="SayHiEditUI" page="AddressUI"></pageItem>
+<pageItem prePage="MoreTabUI" page="AddressUI"></pageItem>
+<!--红包详情页-->
+<pageItem prePage="ChattingUI_chatroom" page="LuckyMoneyDetailUI"></pageItem>
+<pageItem prePage="ChattingUI" page="LuckyMoneyDetailUI"></pageItem>
+<!--我-->
+<pageItem prePage="MainUI" page="MoreTabUI"></pageItem>
+<pageItem prePage="FindMoreFriendUI" page="MoreTabUI"></pageItem>
+<pageItem prePage="AddressUI" page="MoreTabUI"></pageItem>
+<!--我的相册-消息列表-->
+<pageItem prePage="SnsTimeLineUI" page="SnsMsgUI"></pageItem>
+<!--朋友圈详情页-->
+<pageItem prePage="SnsMsgUI" page="SnsCommentDetailUI"></pageItem>
+<!--腾讯新闻会话界面-->
+<pageItem prePage="MainUI" page="ReaderAppUI"></pageItem></specialPVPages></event><event><id>1001</id><name>聊天记录迁移</name><expireTime>1472601600</expireTime><rate>1</rate><logId>13441</logId><pages type="respective"><page id="BakMoveBaseUI" action="false"></page>
+<page id="BakMoveUI" action="false"></page>
+<page id="BakMoveChooseUI" action="false"></page>
+<page id="BakMoveWaitUI" action="false"></page>
+<page id="BakMoveOldUI" action="false"></page>
+<page id="BakMoveNewUI" action="false"></page>
+<page id="BakMoveErrUI" action="false"></page>
+
+<page id="BakConnErrorUI" action="false"></page>
+<page id="BakFinishUI" action="false"></page>
+<page id="BakOperatingUI" action="false"></page>
+<page id="BakToPcUI" action="false"></page>
+<page id="BakWaitingUI" action="false"></page>			</pages></event></events></eventSampleConf>
